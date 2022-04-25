@@ -4,12 +4,11 @@ let productName : string;
 let unitPrice:number;
 let quantity:number;
 let deliverToHome:boolean;
-let totalPrice:number;
-let discountedPrice:number;
+
 
 function getDiscountedPrice(unitPrice:number,quantity:number,totalTypesOfDiscount:DiscountType|number) : number {
     let totalPrice=(unitPrice*quantity);
-    discountedPrice= totalPrice - ((totalPrice*totalTypesOfDiscount)/100)
+    let discountedPrice= totalPrice - ((totalPrice*totalTypesOfDiscount)/100)
     return discountedPrice;
     
     
