@@ -29,3 +29,20 @@
 </div>
 <h3>For displaying images, put all images in assets folder</h3>
 <img src="../../assets/stock.jpg" />
+
+
+<table border="2">
+    <th>Product Id</th>
+    <th>Product Name</th>
+    <th>Product Category</th>
+    <th>Product Quantity</th>
+    <th>Index Locations</th>
+    
+    <tr *ngFor="let items of listOfProducts;let i=index">
+        <td>{{items.pid}}</td>
+        <td>{{items.pname}}</td>
+        <td>{{items.category}}</td>
+        <td>{{items.quantity}}</td>
+        <td>{{i}}</td>
+    </tr>
+</table>
