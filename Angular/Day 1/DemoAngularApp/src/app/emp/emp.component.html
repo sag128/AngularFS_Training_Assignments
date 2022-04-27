@@ -18,31 +18,26 @@
 
 <p>*ngFor is used to iterate a list in the template</p>
 
-<div *ngFor = "let username of listOfNames">
-    <p>{{username}}</p>
-</div>
+<span *ngFor = "let username of listOfNames">
+            {{username}}
+        </span>
+    
 
 <h3>Another way is with using index</h3>
 
-<div *ngFor = "let username of listOfNames;let i=index">
-    <p>{{listOfNames[i]}}</p>
-</div>
-<h3>For displaying images, put all images in assets folder</h3>
+        <span *ngFor = "let username of listOfNames;let i=index">
+            {{listOfNames[i]}}
+        </span>
+
+        <h3>For displaying images, put all images in assets folder</h3>
 <img src="../../assets/stock.jpg" />
 
-
-<table border="2">
-    <th>Product Id</th>
-    <th>Product Name</th>
-    <th>Product Category</th>
-    <th>Product Quantity</th>
-    <th>Index Locations</th>
     
-    <tr *ngFor="let items of listOfProducts;let i=index">
-        <td>{{items.pid}}</td>
-        <td>{{items.pname}}</td>
-        <td>{{items.category}}</td>
-        <td>{{items.quantity}}</td>
-        <td>{{i}}</td>
-    </tr>
-</table>
+    <div *ngFor="let items of listOfProducts;let i=index" class="card">
+    
+        Product ID : <p>{{items.pid}}</p>
+        Product Name :<p>{{items.pname}}</p>
+        Product Category : <p>{{items.category}}</p>
+        Product Quantity :<p>{{items.quantity}}</p>
+        Index Location : <p>{{i}}</p>
+</div>
