@@ -1,0 +1,25 @@
+<table border="2px">
+    <th>Employee Id</th>
+    <th>Employee Name</th>
+    <th>Employee Job</th>
+    <th>Employee Salary</th>
+    <th>Employee Department</th>
+    
+    <tr>
+        <td>{{id}}</td>
+        <td>{{name}}</td>
+        <td>{{role}}</td>
+        <td>{{salary}}</td>
+        <td>{{departmentNo}}</td>
+        
+    </tr>
+</table>
+<h3>Iterate using *ngFor</h3>
+
+<p>*ngFor is used to iterate a list in the template</p>
+
+<div *ngFor = "let username of listOfNames">
+    <p>{{username}}</p>
+</div>
+<h3>For displaying images, put all images in assets folder</h3>
+<img src="../../assets/stock.jpg" />
