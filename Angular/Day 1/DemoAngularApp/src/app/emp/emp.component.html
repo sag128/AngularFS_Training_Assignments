@@ -56,4 +56,4 @@ Quantity: <input  type="number" [(ngModel)] = "quantity"/>
 <br/>
 <input type="submit" value="Submit" (click)="submit()"/>
 
-<p>Total Amount is : <span [ngClass]="{'blue': total < 10000, 'green' : total >= 10000 }">{{total}}</span></p>
+<p>Total Amount is : <span [style.color] = "total >= 10000?'green':'blue'">{{total}}</span></p>
