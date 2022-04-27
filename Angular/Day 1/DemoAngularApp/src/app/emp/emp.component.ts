@@ -13,7 +13,11 @@ export class EmpComponent implements OnInit {
   role:string = "Manager";
   salary:number = 75000;
   departmentNo:number = 10;
+  productName:string="";
+  productPrice:number=0;
+  quantity:number=0;
 
+  
 
   listOfNames:string[] = ["Ash","Test","TestUser","NewUser"];
 
@@ -25,10 +29,15 @@ export class EmpComponent implements OnInit {
     {pid:5,category:"Dairy",pname:"Amul Milk",quantity:100},
     
   ]
+  total: number=0;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  submit() {
+    this.total = this.productPrice*this.quantity;
   }
 
 }

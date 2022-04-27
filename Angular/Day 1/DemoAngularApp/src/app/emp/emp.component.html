@@ -41,3 +41,19 @@
         Product Quantity :<p>{{items.quantity}}</p>
         Index Location : <p>{{i}}</p>
 </div>
+
+
+
+
+Product name: <input  type="text" [(ngModel)] = "productName"/>
+<br/>
+<br/>
+Product price: <input  type="number" [(ngModel)] = "productPrice"/>
+<br/>
+<br/>
+Quantity: <input  type="number" [(ngModel)] = "quantity"/>
+<br/>
+<br/>
+<input type="submit" value="Submit" (click)="submit()"/>
+
+<p>Total Amount is : <span [ngClass]="{'blue': total < 10000, 'green' : total >= 10000 }">{{total}}</span></p>
