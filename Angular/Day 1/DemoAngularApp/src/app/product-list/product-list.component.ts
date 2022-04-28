@@ -49,7 +49,7 @@ ngOnChanges() {
   // }
 
   
-  let foundCol = Object.keys(this.products[0]).find(e=>e == this.sortColumn);
+  // let foundCol = Object.keys(this.products[0]).find(e=>e == this.sortColumn);
   
    this.products.sort((a:any,b:any)=>a[this.sortColumn] < b[this.sortColumn] ? -1 : 1);
   
