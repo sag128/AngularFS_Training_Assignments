@@ -1,11 +1,11 @@
 <div class="test">
-    <ng-container class="card" *ngFor = "let item of products" style="width: 100%;">
-        <div class="container" *ngIf="item.category == category" style="padding: 20px;"  >
+    <div class="card" *ngFor = "let item of filteredProducts" style="width: 100%;">
+        <div class="container">
                 <p>Product Id : {{item.pid}}</p>
                 <p>Product Name : {{item.pname}}</p>
                 <p>Price : {{item.price}}</p>
                 <p>Quantity : {{item.quantity}}</p>
                 <hr>
-        </div>
-    </ng-container>
+            </div>
+    </div>
 </div>

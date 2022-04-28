@@ -11,6 +11,8 @@ export class ProductListComponent implements OnInit {
   @Input()
   category:string="";
 
+  filteredProducts:Product[]=[];
+
   products:Product[] = [
     {category:"Mobiles",pname:"Redmi",pid:1,price:14000,quantity:5},
     {category:"Mobiles",pname:"Iphone",pid:2,price:55000,quantity:2},
@@ -28,6 +30,11 @@ export class ProductListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    this.filteredProducts = this.products.filter(item=>item.category == this.category);
+    
+
+
   }
 
 }
