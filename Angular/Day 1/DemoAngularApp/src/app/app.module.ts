@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { DeptListComponent } from './dept-list/dept-list.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
+import { SortListComponent } from './sort-list/sort-list.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ProductComponent } from './product/product.component';
     EmpComponent,
     DeptListComponent,
     ProductListComponent,
-    ProductComponent
+    ProductComponent,
+    SortListComponent
   ],
   imports: [
     BrowserModule,
