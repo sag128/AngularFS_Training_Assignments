@@ -22,11 +22,11 @@ export class EmpComponent implements OnInit {
   listOfNames:string[] = ["Ash","Test","TestUser","NewUser"];
 
   listOfProducts:Product[] = [
-    {pid:1,category:"Chocolate",pname:"Cadbury",quantity:10},
-    {pid:2,category:"Chips",pname:"Lays",quantity:50},
-    {pid:3,category:"Drinks",pname:"Pepsi",quantity:30},
-    {pid:4,category:"Frozen",pname:"McCain",quantity:5},
-    {pid:5,category:"Dairy",pname:"Amul Milk",quantity:100},
+    {pid:1,category:"Chocolate",pname:"Cadbury",quantity:10,price:0},
+    {pid:2,category:"Chips",pname:"Lays",quantity:50,price:0},
+    {pid:3,category:"Drinks",pname:"Pepsi",quantity:30,price:0},
+    {pid:4,category:"Frozen",pname:"McCain",quantity:5,price:0},
+    {pid:5,category:"Dairy",pname:"Amul Milk",quantity:100,price:0},
     
   ]
   total: number=0;

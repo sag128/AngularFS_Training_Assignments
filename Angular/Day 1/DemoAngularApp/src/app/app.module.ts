@@ -7,13 +7,17 @@ import { LoginComponent } from './login/login.component';
 import { EmpComponent } from './emp/emp.component';
 import { FormsModule } from '@angular/forms';
 import { DeptListComponent } from './dept-list/dept-list.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     EmpComponent,
-    DeptListComponent
+    DeptListComponent,
+    ProductListComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

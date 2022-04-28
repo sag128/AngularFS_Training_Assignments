@@ -3,6 +3,6 @@ export class Product {
     pname:string="";
     category:string="";
     quantity:number=0;
-
+    price:number=0;
 
 }
