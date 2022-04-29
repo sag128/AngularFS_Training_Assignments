@@ -1,0 +1,37 @@
+Enter Employee ID : <input type="number" [(ngModel)] = "id">
+<br>
+Enter Employee First Name : <input type="text" [(ngModel)] = "first_name" minlength="3" maxlength="40">
+<br>
+Enter Employee Last Name : <input type="text" [(ngModel)] = "last_name" minlength="3" maxlength="40">
+<br>
+Select Employee Grade :
+<select [(ngModel)] = "grade">
+    <option value=1>1</option>
+    <option value=2>2</option>
+    <option value=3>3</option>
+    <option value=4>4</option>
+</select>
+<br>
+Enter Employee Salary : <input type="number" minlength="5" maxlength="6" max="100000" [(ngModel)]="salary">
+<br>
+<br>
+
+<input type="button" value="Submit" (click)="addEmp()" />
+<br>
+<br>
+<table border="2">
+    <th *ngFor = "let header of employeeHeaders">
+        {{header}}
+    </th>
+    <tr *ngFor="let emp of employeeData">
+        <td> <p>Id : {{emp.id}}</p> </td>
+        <td><p>First Name : {{emp.first_name}}</p></td>
+        <td><p>Last Name : {{emp.last_name}}</p></td>
+        <td><p>Grade : {{emp.grade | gradePipe}}</p></td>
+        <td><p>Salary : {{emp.salary | currency : "INR"}}</p></td>
+        <td> <a  (click)="deleteEmp(emp.id)" >
+            <img src="assets/delete.png" alt="" width="30" />
+          </a></td>
+    
+    </tr>
+</table>

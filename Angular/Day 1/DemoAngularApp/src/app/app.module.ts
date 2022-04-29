@@ -14,6 +14,7 @@ import { EmpListComponent } from './emp-list/emp-list.component';
 import { GradePipePipe } from './grade-pipe.pipe';
 import { EmpRangeComponent } from './emp-range/emp-range.component';
 import { SalaryRangePipe } from './salary-range.pipe';
+import { EmpCrudComponent } from './emp-crud/emp-crud.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SalaryRangePipe } from './salary-range.pipe';
     EmpListComponent,
     GradePipePipe,
     EmpRangeComponent,
-    SalaryRangePipe
+    SalaryRangePipe,
+    EmpCrudComponent
   ],
   imports: [
     BrowserModule,
