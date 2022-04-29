@@ -1,0 +1,13 @@
+<div class="test">
+    <div class="card" *ngFor = "let emp of employeeData | slice : 0 : end">
+      <p>  Id : {{emp.id}}</p>
+        <p>First Name : {{emp.first_name}}</p>
+        <p>Last Name : {{emp.last_name}}</p>
+        <p>Salary : {{emp.salary}}</p>
+        <p>Grade : {{emp.grade | gradePipe}}</p>
+    </div>    
+    
+</div>
+<button *ngIf="end < employeeData.length" value="Load More ..." (click)="load_more(true)">Load More ...</button>
+    <button *ngIf="start > 0" value="Load Less.." (click)="load_more(false)">Load Less ...</button>
+

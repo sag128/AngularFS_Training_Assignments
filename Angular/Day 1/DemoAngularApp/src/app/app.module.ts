@@ -10,6 +10,8 @@ import { DeptListComponent } from './dept-list/dept-list.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
 import { SortListComponent } from './sort-list/sort-list.component';
+import { EmpListComponent } from './emp-list/emp-list.component';
+import { GradePipePipe } from './grade-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { SortListComponent } from './sort-list/sort-list.component';
     DeptListComponent,
     ProductListComponent,
     ProductComponent,
-    SortListComponent
+    SortListComponent,
+    EmpListComponent,
+    GradePipePipe
   ],
   imports: [
     BrowserModule,
