@@ -58,9 +58,7 @@ export class EmpListComponent implements OnInit {
   {"id":47,"first_name":"Kessia","last_name":"Fockes","grade":2,"salary":44427},
   {"id":48,"first_name":"Sid","last_name":"Krzyzanowski","grade":3,"salary":72854},
   {"id":49,"first_name":"Timoteo","last_name":"Lepope","grade":4,"salary":37029},
-  {"id":50,"first_name":"Elmore","last_name":"Redhills","grade":1,"salary":21734},
-  {"id":51,"first_name":"Aaren","last_name":"Leathard","grade":1,"salary":41139},
-  {"id":52,"first_name":"Massimiliano","last_name":"Gouinlock","grade":1,"salary":45761}]
+  {"id":50,"first_name":"Elmore","last_name":"Redhills","grade":1,"salary":21734}]
   
   end: number=4;
   start: number=0;
