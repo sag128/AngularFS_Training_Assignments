@@ -1,0 +1,23 @@
+Salary Filter Property <br>
+<br> 
+
+Min Value : <input  type="number" [(ngModel)] ="min" placeholder="Enter Minimum salary Range"/>
+ 
+Max Value : <input   type="number" [(ngModel)] ="max" placeholder="Enter Maximum salary Range"/>
+<br>
+<br>
+<input type="submit" value="Submit" (click)="applyFilter()">
+<br><br>
+
+<table class="center" border="2" >
+    <th *ngFor="let header of employeeHeaders">
+        {{header}}</th>
+
+    <tr *ngFor="let emp of employeeData | salaryRange : filterMin : filterMax ">
+        <td>{{emp.id}}</td>
+        <td>{{emp.first_name}}</td>
+        <td>{{emp.last_name}}</td>
+        <td>{{emp.grade}}</td>
+        <td>{{emp.salary}}</td>
+    </tr>
+</table>

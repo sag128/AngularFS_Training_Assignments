@@ -12,6 +12,8 @@ import { ProductComponent } from './product/product.component';
 import { SortListComponent } from './sort-list/sort-list.component';
 import { EmpListComponent } from './emp-list/emp-list.component';
 import { GradePipePipe } from './grade-pipe.pipe';
+import { EmpRangeComponent } from './emp-range/emp-range.component';
+import { SalaryRangePipe } from './salary-range.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { GradePipePipe } from './grade-pipe.pipe';
     ProductComponent,
     SortListComponent,
     EmpListComponent,
-    GradePipePipe
+    GradePipePipe,
+    EmpRangeComponent,
+    SalaryRangePipe
   ],
   imports: [
     BrowserModule,

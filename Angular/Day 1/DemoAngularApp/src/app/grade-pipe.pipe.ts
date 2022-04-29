@@ -5,22 +5,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class GradePipePipe implements PipeTransform {
 
+  gradeKeyValue:any[] = [{key:1,value:"Outstanding"},
+  {key:2,value:"Excellent"},
+  {key:3,value:"Good"},
+  {key:4,value:"Average"},
+]
+
   transform(input:number): string {
-    if(input==1){
-      return "Outstanding";
-    }
-    else if(input==2) {
-      return "Excellent";
-    }
-    else if(input==3) {
-      return "Good";
-    }
-    else if(input==4) {
-      return "Average";
-    }
-    else {
-      return "Needs Improvement";
-    }
+    return this.gradeKeyValue.find(item=>item.key==input).value;
   }
 
 }
