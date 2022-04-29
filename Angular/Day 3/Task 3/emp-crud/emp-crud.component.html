@@ -23,6 +23,7 @@ Enter Employee Salary : <input type="number" minlength="5" maxlength="6" max="10
     <th *ngFor = "let header of employeeHeaders">
         {{header}}
     </th>
+    <th>Delete</th>
     <tr *ngFor="let emp of employeeData">
         <td> <p>Id : {{emp.id}}</p> </td>
         <td><p>First Name : {{emp.first_name}}</p></td>
