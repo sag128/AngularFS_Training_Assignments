@@ -1,0 +1,83 @@
+<style>
+    .bg1{ background-color :  lightblue;  }
+  .bg2{ background-color :  lightgreen;  }
+  .bg3{ background-color :  pink;  }
+  .c1
+  {
+    color : dodgerblue;
+    border:1px solid dodgerblue;
+    width :  100px;
+    margin : 5px;
+    float : left;
+    text-align : center;
+    background-color : white;
+  }
+</style>
+<ul >
+
+    <li *ngFor = "let v of values" >
+        <img (mouseover)="changeOption(v.value)" value="v.value" width="50" height="60" [src] ="v.img">
+    </li>
+    
+</ul>
+
+
+<section  [ngSwitch]="option">
+    <article *ngSwitchCase=" 'list' ">
+    
+        <ul *ngFor="let item of productsArray; let i = index; let isEven = even; let isOdd = odd">
+      <li>Product ID : {{item.pid}}</li>
+      <li>Product Name: {{item.pname}}</li>
+      <li>Product Price : {{item.price}}</li>
+      <li>Product Category : {{item.category}}</li>
+      <li>Product Quantity : {{item.quantity}}</li>
+      
+    </ul>
+    </article>
+    <article *ngSwitchCase=" 'details' ">
+        <table border="2" cellspacing="0" cellpadding="5" width="500">
+            <tr class="bg1">
+              <th>Product ID</th>
+              <th>Product Name</th>
+              <th>Product Price</th>
+              <th>Product category</th>
+              <th>Product Quantity</th>
+              
+            </tr>
+      
+            <tr *ngFor="let item of productsArray; let i = index; let isEven = even; let isOdd = odd"
+                [ngClass]="{'bg2':isEven, 'bg3':isOdd}">
+              <td>{{item.pid}}</td>
+              <td>{{item.pname}}</td>
+              <td>{{item.price}}</td>
+              <td>{{item.category}}</td>
+              <td>{{item.quantity}}</td>
+              
+            </tr>
+      
+          </table>
+        </article>
+        <article *ngSwitchCase=" 'large_icon' ">
+            <div *ngFor = "let product of productsArray">
+                <div class="c1">
+            <img [src]="product.picture" width="100" height="100">
+            <p>Product Name : {{product.pname}}</p>
+            <p>Product Price : {{product.price}}</p>
+            </div>   
+        </div>
+            </article>
+            <article *ngSwitchCase=" 'small_icon' ">
+                <div *ngFor = "let product of productsArray">
+                    <div class="c1">
+                <img [src]="product.picture" width="30" height="30">
+                <p>Product Name : {{product.pname}}</p>
+                <p>Product Price : {{product.price}}</p>
+                <p>Product Category : {{product.category}}</p>
+                
+                </div>   
+            </div>
+            </article>
+                <article *ngSwitchDefault> This is default mode </article>
+
+
+</section>

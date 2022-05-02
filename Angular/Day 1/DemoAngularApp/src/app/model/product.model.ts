@@ -4,5 +4,6 @@ export class Product {
     category:string="";
     quantity:number=0;
     price:number=0;
+    picture?:string="";
 
 }
