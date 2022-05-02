@@ -13,13 +13,12 @@
     background-color : white;
   }
 </style>
-<ul >
 
-    <li *ngFor = "let v of values" >
+    Display Mode : <span *ngFor = "let v of values" >
         <img (mouseover)="changeOption(v.value)" value="v.value" width="50" height="60" [src] ="v.img">
-    </li>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>
     
-</ul>
 
 
 <section  [ngSwitch]="option">
