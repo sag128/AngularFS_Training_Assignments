@@ -16,6 +16,7 @@ import { EmpRangeComponent } from './emp-range/emp-range.component';
 import { SalaryRangePipe } from './salary-range.pipe';
 import { EmpCrudComponent } from './emp-crud/emp-crud.component';
 import { SwitchExampleComponent } from './switch-example/switch-example.component';
+import { FancyCardComponent } from './fancy-card/fancy-card.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SwitchExampleComponent } from './switch-example/switch-example.componen
     EmpRangeComponent,
     SalaryRangePipe,
     EmpCrudComponent,
-    SwitchExampleComponent
+    SwitchExampleComponent,
+    FancyCardComponent
   ],
   imports: [
     BrowserModule,
