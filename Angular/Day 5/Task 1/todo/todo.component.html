@@ -1,0 +1,33 @@
+<div class="box">
+    <h3>Todo List</h3>
+<input type="text" required [(ngModel)]="todoInput"/>
+<br>
+<br>
+<button type="button" (click) = "addTask()">Add Task</button>
+</div>
+
+<div class="box-small" *ngFor = "let todo of todos;let i=index">
+    <div >
+    
+    <span [ngClass]="{'strike':todo.done}">{{todo.title}}</span>
+    <input type="checkbox" [value]="todo.done" (change)="onCheckboxChange(i,!todo.done)"/>
+    <img *ngIf="isEditButtonVisible" (click)="toggleEdit(i,true,todo.title)"  width="20px" src="../../assets/edit.png"/>
+    <div *ngIf="todo.isEditMode">
+        <br>
+        <input type="text" required [(ngModel)]="todoUpdate"/>
+        <button (click)="update(i)" type="button">Update</button>
+        <br>
+        <button (click)="toggleEdit(i,false)" type="button">Cancel</button>
+        <br>
+    </div>  
+
+    
+    <img style="float: right;" class="delete(i)"  width="20px" src="../../assets/dustbin-delete.png"/>
+</div>
+</div>
+
+<button type="button" (click)="deleteSelectedTasks()">Delete Done Tasks</button>
+<button type="button" (click)="delete()">Delete All Tasks</button>
+
+
+

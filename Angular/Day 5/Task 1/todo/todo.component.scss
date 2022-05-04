@@ -1,0 +1,24 @@
+.strike {
+    text-decoration: line-through;
+}
+
+.blue {background-color: #008CBA;} /* Blue */
+.red {background-color: #f44336;} /* Red */
+.box {
+    background-color: lightgrey;
+    width: max-content;
+    border: 3px solid lightblue;
+    padding: 50px;
+    margin: 20px;
+  }
+
+  .box-small {
+    background-color: lightgrey;
+    width: max-content;
+    padding: 20px;
+    
+    border: 3px solid lightblue;
+    margin: 10px;
+  }
+
+  

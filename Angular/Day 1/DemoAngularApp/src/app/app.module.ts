@@ -17,7 +17,9 @@ import { SalaryRangePipe } from './salary-range.pipe';
 import { EmpCrudComponent } from './emp-crud/emp-crud.component';
 import { SwitchExampleComponent } from './switch-example/switch-example.component';
 import { FancyCardComponent } from './fancy-card/fancy-card.component';
-
+import { TodoComponent } from './todo/todo.component';
+import { ObservableDemoComponent } from './observable-demo/observable-demo.component';
+import {HttpClientModule} from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,12 +35,16 @@ import { FancyCardComponent } from './fancy-card/fancy-card.component';
     SalaryRangePipe,
     EmpCrudComponent,
     SwitchExampleComponent,
-    FancyCardComponent
+    FancyCardComponent,
+    TodoComponent,
+    ObservableDemoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
