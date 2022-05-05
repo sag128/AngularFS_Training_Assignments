@@ -1,0 +1,74 @@
+{
+  "employees": [
+    {
+      "empno": 3,
+      "ename": "Hanan Bickerstaff",
+      "job": "Budget/Accounting Analyst IV",
+      "salary": 25374,
+      "deptno": 6
+    },
+    {
+      "empno": 4,
+      "ename": "Frannie Rosetti",
+      "job": "Safety Technician III",
+      "salary": 59951,
+      "deptno": 8
+    },
+    {
+      "empno": 5,
+      "ename": "Gabrielle Trumpeter",
+      "job": "Librarian",
+      "salary": 75384,
+      "deptno": 6
+    },
+    {
+      "empno": 6,
+      "ename": "Ranique Spadoni",
+      "job": "Associate Professor",
+      "salary": 94428,
+      "deptno": 7
+    },
+    {
+      "empno": 7,
+      "ename": "Modesta Keeting",
+      "job": "VP Sales",
+      "salary": 60383,
+      "deptno": 8
+    },
+    {
+      "empno": 8,
+      "ename": "Halsy Vigne",
+      "job": "Media Manager II",
+      "salary": 67057,
+      "deptno": 6
+    },
+    {
+      "empno": 9,
+      "ename": "Belle Eyden",
+      "job": "Compensation Analyst",
+      "salary": 13209,
+      "deptno": 8
+    },
+    {
+      "empno": 10,
+      "ename": "Crawford Dowbiggin",
+      "job": "Pharmacist",
+      "salary": 31710,
+      "deptno": 5
+    },
+    {
+      "empno": 11,
+      "ename": "Test2111",
+      "job": "New211",
+      "salary": 50000,
+      "deptno": 2
+    },
+    {
+      "empno": 12,
+      "ename": "Test2",
+      "job": "New2",
+      "salary": 121212,
+      "deptno": 1
+    }
+  ]
+}
