@@ -1,0 +1,31 @@
+<form>
+   Id: <input type="number" placeholder="Enter Employee Number" [(ngModel)]="empno" name="empno"/>
+    Name : <input type="text" placeholder="Enter Employee name" [(ngModel)]="ename" name="ename"/>
+    Job : <input type="text" placeholder="Enter Employee Designation" [(ngModel)]="job" name="job"/>
+    Salary : <input type="number" placeholder="Enter Employee Salary" [(ngModel)]="salary" name="salary"/>
+    Dept Number : <input type="number" placeholder="Enter Employee Department Number" [(ngModel)]="deptno" name="deptno"/>
+    
+</form>
+
+<button type="button" (click)="getData()">Get Employee Data</button>
+<button type="button" (click)="update()">Add Employee</button>
+
+<button type="button" (click)="update()">Update Employee</button>
+
+
+<table border="2">
+    <th *ngFor="let header of employeeHeaders">
+        {{header}}
+    </th>
+    <tr *ngFor = "let emp of empData;let i=index">
+        <td>{{emp.empno}}</td>
+        <td>{{emp.ename}}</td>
+        <td>{{emp.job}}</td>
+        <td>{{emp.salary}}</td>
+        <td>{{emp.deptno}}</td>
+        <td><a  href="javascript:void(0)" (click)="selectData(emp)">Select</a>
+            <br>
+            <a href="javascript:void(0)" (click)="deleteEmp(emp.empno)">Delete</a>
+        </td>
+    </tr>
+</table>
