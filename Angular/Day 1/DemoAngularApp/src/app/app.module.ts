@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { EmpComponent } from './emp/emp.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DeptListComponent } from './dept-list/dept-list.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
@@ -22,6 +22,7 @@ import { ObservableDemoComponent } from './observable-demo/observable-demo.compo
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { CrudDemoComponent } from './crud-demo/crud-demo.component'
 import { HttpInterceptService } from './http-intercept.service';
+import { VehicleRegComponent } from './vehicle-reg/vehicle-reg.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,13 +41,15 @@ import { HttpInterceptService } from './http-intercept.service';
     FancyCardComponent,
     TodoComponent,
     ObservableDemoComponent,
-    CrudDemoComponent
+    CrudDemoComponent,
+    VehicleRegComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
     
   ],
   providers: [{provide : HTTP_INTERCEPTORS, useClass: HttpInterceptService, multi:true}],

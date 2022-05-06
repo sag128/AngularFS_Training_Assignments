@@ -1,0 +1,70 @@
+<form [formGroup]="vehicleForm">
+    <fieldset>
+        <legend>Vehicle Registration</legend>
+        <label for="ownerName">Owner's Name : </label>
+        <input type="text" formControlName="ownerName" id="ownerName" />
+        &nbsp;<span class="error" *ngIf="getControl('ownerName')?.hasError('required') && getControl('ownerName')?.dirty">Owner Name is Required</span>
+        
+        <br>
+        <br>
+        <label for="contactNumber">Contact Number : </label>
+        <input type="number" formControlName="contactNumber" id="contactNumber" />
+        &nbsp;<span class="error" *ngIf="getControl('contactNumber')?.hasError('required') && getControl('contactNumber')?.dirty">Contact Number is Required</span>
+        <span class="error" *ngIf="getControl('contactNumber')?.hasError('pattern') && getControl('contactNumber')?.dirty">Contact Number must be an Indian number</span>
+        
+        <br>
+        <br>
+        <label for="ownerEmail">Owner's Email : </label>
+        <input type="text" formControlName="ownerEmail" id="ownerEmail" />
+        &nbsp;<span class="error" *ngIf="getControl('ownerEmail')?.hasError('required') && getControl('ownerEmail')?.dirty">Owner Email is Required</span>
+        <span class="error" *ngIf="getControl('ownerEmail')?.hasError('email') && getControl('ownerEmail')?.dirty">Owner Email must be in proper Format</span>
+        
+        <br>
+        <br>
+        <label for="regNum">Vehicle Registration Number : </label>
+        <input type="text" formControlName="regNum" id="regNum" />
+        
+        &nbsp;<span class="error" *ngIf="getControl('regNum')?.hasError('required') && getControl('regNum')?.dirty">Vehicle Registration Number is Required</span>
+        <span class="error" *ngIf="getControl('regNum')?.hasError('pattern') && getControl('regNum')?.dirty">Vehicle Registration Number must be in proper Format</span>
+        
+        <br>
+        <br>
+        <label for="address">Address : </label>
+        <textarea formControlName="address" id="address" ></textarea>
+        
+        &nbsp;<span class="error" *ngIf="getControl('address')?.hasError('required') && getControl('address')?.dirty">Address  is Required</span>
+        
+        <br>
+        <br>
+        <label for="model">Model : </label>
+        <input type="text" formControlName="model" id="model" />
+        
+        &nbsp;<span class="error" *ngIf="getControl('model')?.hasError('required') && getControl('model')?.dirty">Model is Required</span>
+        <span class="error" *ngIf="getControl('model')?.hasError('minlength') && getControl('model')?.dirty">Model must be at least 10 characters</span>
+        
+        <br>
+        <br>
+        <label for="color">Color : </label>
+        <select formControlName="color" id="color">
+            <option value="Black" selected>Black</option>
+            <option value="Red">Red</option>
+            <option value="Green">Green</option>
+            <option value="Blue">Blue</option>
+            <option value="Yellow">Yellow</option>
+        </select>
+        &nbsp;<span class="error" *ngIf="getControl('color')?.hasError('required') && getControl('color')?.dirty">Color is Required</span>
+        <br>
+        <br>
+        <label for="year">Year : </label>
+        <input type="number" formControlName="year" id="year" />
+        
+        &nbsp;<span class="error" *ngIf="getControl('year')?.hasError('required') && getControl('year')?.dirty">Year is Required</span>
+        <span class="error" *ngIf="getControl('year')?.hasError('min') && getControl('year')?.dirty">Year cannot be less than 2012</span>
+        <span class="error" *ngIf="getControl('year')?.hasError('max') && getControl('year')?.dirty">Year cannot be greater than 2022</span>
+        
+        <br>
+        <br>
+    </fieldset>
+
+    <input type="button" (click)="onSubmit()" value="Register" [disabled]="vehicleForm?.invalid" />
+</form>
