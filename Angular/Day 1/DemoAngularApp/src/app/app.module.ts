@@ -23,6 +23,8 @@ import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { CrudDemoComponent } from './crud-demo/crud-demo.component'
 import { HttpInterceptService } from './http-intercept.service';
 import { VehicleRegComponent } from './vehicle-reg/vehicle-reg.component';
+import { CustomDirectiveDirective } from './custom-directive.directive';
+import { AdminPanelDirective } from './admin-panel.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +44,9 @@ import { VehicleRegComponent } from './vehicle-reg/vehicle-reg.component';
     TodoComponent,
     ObservableDemoComponent,
     CrudDemoComponent,
-    VehicleRegComponent
+    VehicleRegComponent,
+    CustomDirectiveDirective,
+    AdminPanelDirective
   ],
   imports: [
     BrowserModule,
