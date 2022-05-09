@@ -5,5 +5,6 @@ export class Product {
     quantity:number=0;
     price:number=0;
     picture?:string="";
+    categoryId?:number=0;
 
 }

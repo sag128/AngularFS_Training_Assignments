@@ -1,0 +1,4 @@
+<div *ngFor = "let category of categories;let i=index" style="text-align: left;">
+    <a [routerLink]=" '/product/'+[category.id] ">{{category.id}}. {{category.name}}</a>  
+    </div>
+    

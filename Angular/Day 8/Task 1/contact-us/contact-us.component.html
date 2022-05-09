@@ -1,0 +1,27 @@
+<form [formGroup]="contactUs">
+    <fieldset>
+        <legend>Contact Us</legend>
+        <label for="email">Your Email : </label>
+        <input type="text" formControlName="email" id="email" />
+        &nbsp;<span class="error" *ngIf="getControl('email')?.hasError('required') && getControl('email')?.dirty">Email ID is Required</span>
+        <span class="error" *ngIf="getControl('email')?.hasError('email') && getControl('email')?.dirty">Email ID must be in proper Format</span>
+        <br>
+        <br>
+        
+        <label for="subject">Subject : </label>
+        <input type="text" formControlName="subject" id="subject" />
+        &nbsp;<span class="error" *ngIf="getControl('subject')?.hasError('required') && getControl('subject')?.dirty">Subject is Required</span>
+        
+
+        <br>
+        <br>
+        <label for="body">Your Query : </label>
+        <textarea formControlName="body" id="body" ></textarea>
+        
+        &nbsp;<span class="error" *ngIf="getControl('body')?.hasError('required') && getControl('body')?.dirty">Please enter your query</span>
+        <br>
+        <br>
+    </fieldset>
+    
+    <input type="button" (click)="onSubmit()" value="Send Email" [disabled]="contactUs?.invalid" />
+</form>

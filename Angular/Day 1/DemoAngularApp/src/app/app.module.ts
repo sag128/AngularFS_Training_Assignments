@@ -25,6 +25,10 @@ import { HttpInterceptService } from './http-intercept.service';
 import { VehicleRegComponent } from './vehicle-reg/vehicle-reg.component';
 import { CustomDirectiveDirective } from './custom-directive.directive';
 import { AdminPanelDirective } from './admin-panel.directive';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { CategoriesComponent } from './categories/categories.component';
+import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +50,11 @@ import { AdminPanelDirective } from './admin-panel.directive';
     CrudDemoComponent,
     VehicleRegComponent,
     CustomDirectiveDirective,
-    AdminPanelDirective
+    AdminPanelDirective,
+    ContactUsComponent,
+    AboutUsComponent,
+    CategoriesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
