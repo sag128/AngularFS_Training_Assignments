@@ -1,0 +1,33 @@
+
+    <mat-card>
+        <mat-card-title>Add Product</mat-card-title>
+        <br /><br />
+        <mat-card-content>
+          <mat-form-field type="text" class="example-full-width" appearance="fill">
+            <mat-label>Product Name</mat-label>
+    <input matInput [(ngModel)] = "productname" name="productname" placeholder="Enter Product Name" required>
+          </mat-form-field>
+        
+          <br/>
+          <br/>
+  
+          <mat-form-field type="number" class="example-full-width" appearance="fill">
+            <input type="number" matInput  [(ngModel)]="unitprice" name="unitprice" placeholder="Enter Unit Price" required>
+            <mat-label>Unit Price</mat-label>
+          </mat-form-field>
+        
+          <br/>
+          <br/>
+        
+          <mat-form-field type="number" class="example-full-width" appearance="fill">
+            <input type="number" matInput  [(ngModel)]="quantity" name="quantity" placeholder="Enter Quantity" required>
+            <mat-label>Enter Quantity</mat-label>
+          </mat-form-field>
+        
+          <br/>
+          <br/>
+        
+          <button mat-raised-button color="primary" (click)="getTotalAmount()">Login</button>
+        </mat-card-content>
+        <span >{{total}}</span>
+      </mat-card>
